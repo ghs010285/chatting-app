@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "585999840177",
+    "firebase_url": "https://venex-app.firebaseio.com",
+    "project_id": "venex-app",
+    "storage_bucket": "venex-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585999840177:android:9714338de8f64986a68390",
+        "android_client_info": {
+          "package_name": "com.veno_studio.venex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585999840177-34qnupin3cc9q5gtevuibm7hsug5jj9o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.veno_studio.venex",
+            "certificate_hash": "52d2f72cc5f751785f402f4544975477618cdb6b"
+          }
+        },
+        {
+          "client_id": "585999840177-nea6ql9fijvojdk78o9ups1kv1qvoic5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTz84q-qavkb3XIRSWnYuPZvyX0vAvR9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585999840177-nea6ql9fijvojdk78o9ups1kv1qvoic5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

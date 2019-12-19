@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/people_btn"
+        android:enabled="true"
+        android:icon="@drawable/img_people"
+        android:title="@string/people" />
+    <item
+        android:id="@+id/chatting_btn"
+        android:enabled="true"
+        android:icon="@drawable/img_chat"
+        android:title="@string/chat" />
+    <item
+        android:id="@+id/notice_btn"
+        android:enabled="true"
+        android:icon="@drawable/img_notice"
+        android:title="@string/notice" />
+    <item
+        android:id="@+id/more_btn"
+        android:enabled="true"
+        android:icon="@drawable/img_more"
+        android:title="@string/more" />
+
+</menu>

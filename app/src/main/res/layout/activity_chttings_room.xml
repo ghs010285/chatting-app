@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChttingsRoomActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chttings_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:background="@color/green"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:background="@color/background_color"
+            android:src="@drawable/account_setting_img"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"/>
+
+        <EditText
+            android:id="@+id/chatting_input_text"
+            android:hint="@string/chatroom_editText"
+            android:layout_width="310dp"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/chatting_send"
+            android:background="@color/background_color"
+            android:layout_alignParentRight="true"
+            android:text="@string/chat"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

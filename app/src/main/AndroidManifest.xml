@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".Main2Activity"></activity>
-        <activity android:name=".ChttingsRoomActivity" />
+        <activity android:name=".ChattingsRoomActivity" />
         <activity android:name=".ChatRoomActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>

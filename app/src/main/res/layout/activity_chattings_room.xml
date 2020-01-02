@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ChattingsRoomActivity">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/chttings_recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/nav_division"/>
+
+    <ProgressBar
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/nav_division"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/chatting_input_text"
+        android:background="@color/colorDivision"
+        android:orientation="horizontal" />
+
+<EditText
+    android:layout_marginStart="5dp"
+    android:id="@+id/chatting_input_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:hint="@string/message_hint"
+    android:layout_toStartOf="@+id/chatting_send"/>
+
+<ImageButton
+    android:id="@+id/chatting_send"
+    android:background="@color/background_color"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/img_send"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

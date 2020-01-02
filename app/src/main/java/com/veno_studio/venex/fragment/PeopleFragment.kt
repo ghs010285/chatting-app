@@ -6,18 +6,25 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
-import com.veno_studio.venex.ChttingsRoomActivity
+import com.veno_studio.venex.ChattingsRoomActivity
 import com.veno_studio.venex.R
 import com.veno_studio.venex.model.UserModel
 import kotlinx.android.synthetic.main.fragment_people.view.*
 import kotlinx.android.synthetic.main.item_people.view.*
+import com.bumptech.glide.request.RequestOptions
+
+
+
+
 
 
 
@@ -102,8 +109,15 @@ class PeopleFragment : Fragment(){
         override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
             val userCustomHodler = (holder as CustomViewHolder).itemView
 
+            Glide.with(holder.itemView.context)
+                .load(userList?.get(position)?.userImage)
+                .apply(RequestOptions().circleCrop())
+                .into(holder.imageView)
+            holder.textView.setText(userList?.get(position)?.userName)
+
+
             holder.itemView.setOnClickListener{
-                val intent = Intent(view?.context, ChttingsRoomActivity::class.java)
+                val intent = Intent(view?.context, ChattingsRoomActivity::class.java)
                 intent.putExtra("youuid", userList?.get(position)?.uid)
                 startActivity(intent)
                 Log.e("로그","버튼이 눌렸습니다.")
@@ -113,7 +127,10 @@ class PeopleFragment : Fragment(){
             userCustomHodler.people_1line.text = userList?.get(position)?.userOneLine
         }
 
-        inner class CustomViewHolder(view: View?) : RecyclerView.ViewHolder(view!!)
+        inner class CustomViewHolder(view: View?) : RecyclerView.ViewHolder(view!!) {
+            var imageView: ImageView = view?.findViewById(R.id.people_imageProfile) as ImageView
+            var textView: TextView = view?.findViewById(R.id.people_name) as TextView
+        }
 
     }
 }

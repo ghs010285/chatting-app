@@ -1,6 +1,7 @@
 package com.veno_studio.venex
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,7 +9,11 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.veno_studio.venex.model.UserModel
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
+import kotlinx.android.synthetic.main.activity_sign_up.progress_bar
+
+
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -23,8 +28,12 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
 
         signup_user.setOnClickListener { signup_check() }
-        login_btn.setOnClickListener { startActivity(Intent(this, LoginActivity::class.java))
-            finish() }
+        
+        agreement.setOnClickListener {
+            val url = "http://gun0912.tistory.com"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
     }
 
     fun signup_check(){

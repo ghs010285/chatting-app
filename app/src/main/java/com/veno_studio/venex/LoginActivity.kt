@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         login_btn.setOnClickListener { login_check() }
-        signup_btn.setOnClickListener { startActivity(Intent(this, SignUpActivity::class.java)) }
+        login_signup_btn.setOnClickListener { startActivity(Intent(this, SignUpActivity::class.java)) }
     }
 
     override fun onStart() {
